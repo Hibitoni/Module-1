@@ -16,7 +16,5 @@
     } else {  
         console.log('Вы ввели некорректное количество товара');
     }
-    
-    const umnozhenie = newCount * newPrice;
-    console.log(`На складе ${newCount} единицы товара "${newName}" на сумму ${umnozhenie} деревянных`);
+
 }
