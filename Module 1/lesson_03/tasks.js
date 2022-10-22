@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 //TASK 3
 {
@@ -24,7 +24,12 @@
         console.log('Попробуйте в следующий раз..');
     }
 
-//ADDITIONAL TASK
-
+//TASK 4
+    const woth = Number(prompt('Какую сумму желаете снять?'));
+    if (woth % 100 === 0) {
+        console.log('Вы можете снять деньги');
+    } else {
+        console.log('Введите другую сумму, банкомат имеет только купюры по 100р');
+    }
 
 }
