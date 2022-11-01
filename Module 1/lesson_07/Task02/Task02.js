@@ -1,13 +1,10 @@
 'use strict';
 
+const allСashbox = [4500, 3210, 650, 1250, 7830, 990, 13900, 370];
 
-const isPrime = (a) => {
-for (let i = 2; i <= a; i++) {
-    if (a % a === 0 && a % 2 === 0) {
-      return false
-    } else {
-        return true
-        }
-    }
+const getAverageValue = arr => {
+let value = allСashbox.reduce((summ, current) => summ + current, 0);
+return value / allСashbox.length
 }
-console.log(isPrime(Number(prompt('Введите любое число:'))));
+
+console.log(getAverageValue(allСashbox));
