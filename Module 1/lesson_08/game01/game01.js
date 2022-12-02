@@ -1,13 +1,22 @@
 'use strict';
 
-let correctNum = 0;
-let userVariant = Number(prompt('Попробуй угадай число:', '')); //если я буду сразу приводить вводимое значение числом, то и проверять не придется!С: 
-let correctVariant = 
-  (userVariant > correctNum) ? 'Меньше!' :
-  (userVariant < correctNum) ? 'Больше!' :
-  (userVariant == correctNum) ? 'Правильно!'  :
-  (userVariant == 0) ? 'Игра закончена' :
-  'Что-то пошло не так!';
 
+const correctNum = Math.round(Math.random() * 100);
+const userVariant = null;
 
-console.log('correctVariant: ', correctVariant);
+while (correctNum != userVariant) {
+  const userVariant = Number(prompt('Попробуй угадай число:', ''));
+  console.log('ТУПОЙ КОМП', correctNum);
+  console.log('МОЙ ВАРИАНТ', userVariant);
+  if (userVariant == correctNum) {
+    console.log('Правильно!');
+    break
+  }
+    else if (userVariant === 0) {  //Немного не понимаю почему у меня Chrome при нажатии кнопки "CANCEL" возвращает значение 0, а не null. Может быть ты знаешь?
+    console.log('Игра закончена');
+    break
+  }
+  userVariant > correctNum ? 'Меньше!' :
+  userVariant < correctNum ? 'Больше!' : 
+  '';
+}
